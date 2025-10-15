@@ -37,4 +37,12 @@ app/
  │         └── page.tsx      →  /products/details
  └── layout.tsx
 
+Dynamic routes:
+  In Next.js App Router, a dynamic route lets you create pages that respond to variable path segments in the URL.
+app/
+ ├── layout.tsx
+ ├── page.tsx
+ └── product/
+     ├── [productId]/
+     │   └── page.tsx
 
