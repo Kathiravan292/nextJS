@@ -1,2 +1,13 @@
 What is Next.js?
   Next.js is a React-based web framework that helps you build modern, fast, and SEO-friendly web applications easily.
+
+The key features of Next.js:
+  🌟 1. File-based Routing
+  ⚡ 2. Server-Side Rendering (SSR)
+  🏗️ 3. Static Site Generation (SSG)
+  🔄 4. Incremental Static Regeneration (ISR)
+  🧠 5. API Routes (Built-in Backend)
+  🖼️ 6. Image Optimization
+  🧭 7. App Router (New in Next.js 13+)
+  🧩 8. Layouts & Nested Routing
+  ⚙️ 9. Middleware
