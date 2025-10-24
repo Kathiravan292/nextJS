@@ -25,7 +25,7 @@ Basic Example:
 
 🧭 Nested Routes in Next.js (App Router):
   In Next.js, folders inside the app/ directory automatically define nested routes.
-You don’t need React Router — everything is handled by file and folder structure.
+  You don’t need React Router — everything is handled by file and folder structure.
 
 app/
  ├── page.tsx                →  /
