@@ -14,7 +14,7 @@ The key features of Next.js:
 
 Routing Convenction:
   Next.js automatically creates routes based on your folder and file structure — no need for React Router.
-There are two routing systems you might use:
+  There are two routing systems you might use:
 Basic Example:
   app/
  ├── page.js          →   /
