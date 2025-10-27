@@ -3,7 +3,7 @@ What is Next.js?
 
 The key features of Next.js: 
   🌟 1. File-based Routing
-  ⚡ 2. Server-Side Rendering (SSR)
+  ⚡ 2. Server-Side Rendering (SSR) 
   🏗️ 3. Static Site Generation (SSG) 
   🔄 4. Incremental Static Regeneration (ISR)
   🧠 5. API Routes (Built-in Backend)
