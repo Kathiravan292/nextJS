@@ -55,5 +55,60 @@ nested dynamic routes:
            └── comments/
                 └── [commentId]/
                      └── page.js
+colocation:
+  Colocation simply means keeping files that are related to a specific route inside the same folder as that route.
 
+Instead of having separate global folders for components, styles, tests, etc.,
+Next.js encourages you to place them right next to the route (co-located).
+
+Example 1 — Normal Nested Route (Without Colocation):
+app/
+ ├── blog/
+ │    ├── [id]/
+ │    │    └── page.js
+ │    └── page.js
+ ├── components/
+ │    └── Comment.js
+ ├── styles/
+ │    └── blog.css
+ └── layout.js
+
+Example 2 — With Colocation:
+app/
+ └── blog/
+      ├── [id]/
+      │    ├── page.js
+      │    ├── Comment.js         ← component for this route
+      │    ├── CommentForm.js     ← helper component
+      │    ├── style.module.css   ← route-specific style
+      │    └── data.js            ← API or data fetching file
+      ├── page.js
+      └── layout.js
+
+What Is a “Private Folder” in Next.js?
+  A private folder is any folder whose name starts with an underscore (_),
+like this:
+
+app/
+ └── blog/
+      ├── _components/
+      └── page.js
+
+
+👉 Next.js treats folders starting with _ as non-routable —
+they are ignored by the routing system.
+
+
+What Are Group Routes in Next.js?
+  Group Routes let you organize your folder structure without affecting the URL.
+  app/
+ ├── (auth)/
+ │    ├── layout.js
+ │    ├── login/page.js
+ │    └── register/page.js
+ ├── (dashboard)/
+ │    ├── layout.js
+ │    ├── home/page.js
+ │    └── settings/page.js
+ └── layout.js
 
