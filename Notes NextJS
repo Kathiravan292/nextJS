@@ -46,3 +46,14 @@ app/
      ├── [productId]/
      │   └── page.tsx
 
+
+nested dynamic routes:
+  n Next.js, nested dynamic routes let you create pages whose URLs depend on dynamic parameters — like /blog/[id]/comments/[commentId].
+  app/
+ └── blog/
+      └── [id]/
+           └── comments/
+                └── [commentId]/
+                     └── page.js
+
+
