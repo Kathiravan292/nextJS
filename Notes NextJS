@@ -128,3 +128,7 @@ What You Mean by “Multiple Root Router:
      └─ not-found.js
 ___________________________________________________________________________________________________________________________________________________________________
 
+What is Metadata in Next.js:
+      In the App Router, metadata is a built-in SEO system that automatically updates <head> tags for every route — including titles, descriptions, Open Graph tags, favicons, etc.
+
+No need to manually use <Head> anymore.
