@@ -11,7 +11,7 @@ The key features of Next.js:
   🧭 7. App Router (New in Next.js 13+)  
   🧩 8. Layouts & Nested Routing 
   ⚙️ 9. Middleware
-
+___________________________________________________________________________________________________________________________________________________________________
 Routing Convenction:
   Next.js automatically creates routes based on your folder and file structure — no need for React Router.
   There are two routing systems you might use:
@@ -22,7 +22,7 @@ Basic Example:
  │     └── page.js    →   /about
  ├── contact/
  │     └── page.js    →   /contact
-
+___________________________________________________________________________________________________________________________________________________________________
 🧭 Nested Routes in Next.js (App Router):
   In Next.js, folders inside the app/ directory automatically define nested routes.
   You don’t need React Router — everything is handled by file and folder structure.
@@ -36,7 +36,7 @@ app/
  │    └── details/
  │         └── page.tsx      →  /products/details
  └── layout.tsx
-
+___________________________________________________________________________________________________________________________________________________________________
 Dynamic routes:
   In Next.js App Router, a dynamic route lets you create pages that respond to variable path segments in the URL.
 app/
@@ -46,7 +46,7 @@ app/
      ├── [productId]/
      │   └── page.tsx
 
-
+___________________________________________________________________________________________________________________________________________________________________
 nested dynamic routes:
   n Next.js, nested dynamic routes let you create pages whose URLs depend on dynamic parameters — like /blog/[id]/comments/[commentId].
   app/
@@ -55,6 +55,7 @@ nested dynamic routes:
            └── comments/
                 └── [commentId]/
                      └── page.js
+___________________________________________________________________________________________________________________________________________________________________
 colocation:
   Colocation simply means keeping files that are related to a specific route inside the same folder as that route.
 
@@ -84,31 +85,46 @@ app/
       │    └── data.js            ← API or data fetching file
       ├── page.js
       └── layout.js
-
+___________________________________________________________________________________________________________________________________________________________________
 What Is a “Private Folder” in Next.js?
-  A private folder is any folder whose name starts with an underscore (_),
-like this:
+      A private folder is any folder whose name starts with an underscore (_),
+    like this:
+    
+    app/
+     └── blog/
+          ├── _components/
+          └── page.js
+    
+    
+    👉 Next.js treats folders starting with _ as non-routable —
+    they are ignored by the routing system.
 
-app/
- └── blog/
-      ├── _components/
-      └── page.js
-
-
-👉 Next.js treats folders starting with _ as non-routable —
-they are ignored by the routing system.
-
-
+___________________________________________________________________________________________________________________________________________________________________
 What Are Group Routes in Next.js?
-  Group Routes let you organize your folder structure without affecting the URL.
-  app/
- ├── (auth)/
- │    ├── layout.js
- │    ├── login/page.js
- │    └── register/page.js
- ├── (dashboard)/
- │    ├── layout.js
- │    ├── home/page.js
- │    └── settings/page.js
- └── layout.js
+      Group Routes let you organize your folder structure without affecting the URL.
+      app/
+     ├── (auth)/
+     │    ├── layout.js
+     │    ├── login/page.js
+     │    └── register/page.js
+     ├── (dashboard)/
+     │    ├── layout.js
+     │    ├── home/page.js
+     │    └── settings/page.js
+     └── layout.js
+___________________________________________________________________________________________________________________________________________________________________
+What You Mean by “Multiple Root Router:
+      app/
+     ├─ (marketing)/
+     │   ├─ layout.js        ← Root layout #1 (public site)
+     │   └─ page.js          ← Home page
+     │
+     ├─ (dashboard)/
+     │   ├─ layout.js        ← Root layout #2 (private area)
+     │   ├─ page.js          ← Dashboard home
+     │   └─ settings/
+     │       └─ page.js
+     │
+     └─ not-found.js
+___________________________________________________________________________________________________________________________________________________________________
 
