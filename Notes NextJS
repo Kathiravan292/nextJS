@@ -159,3 +159,14 @@ export default function Page() {
   return <button onClick={goToHome}>Go Home</button>;
 }
 ____________________________________________________________________________________________________________________________________________________________________
+Templates:
+      Templates are similar to layouts, but with one big difference:
+Templates re-render from scratch every time you navigate between pages that share them.
+
+| Feature                           | Layout                                | Template                                                             |
+| --------------------------------- | ------------------------------------- | -------------------------------------------------------------------- |
+| Shared between routes             | ✅ Yes                                 | ✅ Yes                                                                |
+| Preserves state on navigation     | ✅ Yes                                 | ❌ No                                                                 |
+| Recreates DOM elements            | ❌ No                                  | ✅ Yes                                                                |
+| Re-runs effects (useEffect, etc.) | ❌ No                                  | ✅ Yes                                                                |
+| Use case                          | Persistent UI (navbar, sidebar, etc.) | Pages that need reset state per navigation (forms, animations, etc.) |
