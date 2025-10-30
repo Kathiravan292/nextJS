@@ -143,4 +143,19 @@ What is the Link Component:
     In Next.js, the Link component (from next/link) enables client-side navigation — meaning fast page transitions without full reloads.
 ____________________________________________________________________________________________________________________________________________________________________
 
+Navigating Programmatically:
+    “Navigating programmatically” means changing the current page or route using code instead of a user manually clicking a link or button.
 
+      "use client";
+import { useRouter } from "next/navigation";
+
+export default function Page() {
+  const router = useRouter();
+
+  const goToHome = () => {
+    router.push("/home");
+  };
+
+  return <button onClick={goToHome}>Go Home</button>;
+}
+____________________________________________________________________________________________________________________________________________________________________
