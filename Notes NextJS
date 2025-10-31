@@ -173,4 +173,19 @@ Templates re-render from scratch every time you navigate between pages that shar
 | Use case                          | Persistent UI (navbar, sidebar, etc.) | Pages that need reset state per navigation (forms, animations, etc.) |
 
 ____________________________________________________________________________________________________________________________________________________________________
+Conditional routes:
+  “Conditional routes” usually means rendering or redirecting to routes based on a condition — like whether a user is logged in, has a specific role, or meets some app logic.
+Example:
+    import { redirect } from "next/navigation";
 
+export default function Home() {
+  const isLoggedIn = false;
+
+  if (!isLoggedIn) {
+    redirect("/login");
+  }
+
+  return <h1>Welcome to the Dashboard!</h1>;
+}
+
+  
